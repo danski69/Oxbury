@@ -269,6 +269,7 @@ public class EMEANewClient {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		// Add a Daily rate
 		chromeDriver.findElement(By.xpath(
 				"/html[1]/body[1]/ngb-modal-window[2]/div[1]/div[1]/app-role-detail[1]/div[2]/form[1]/formly-form[1]/formly-field[1]/formly-group[1]/formly-field[10]/formly-card-wrapper[1]/div[1]/div[2]/formly-repeat-section[1]/div[1]/formly-field[1]/formly-group[1]/formly-field[2]/formly-wrapper-form-field[1]/div[1]/input[1]"))
 				.sendKeys(new CharSequence[]{"250.00"});
@@ -294,6 +295,7 @@ public class EMEANewClient {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		// Add the project name
 		chromeDriver.findElement(By.xpath(
 				"/html[1]/body[1]/ngb-modal-window[2]/div[1]/div[1]/app-role-detail[1]/div[2]/form[1]/formly-form[1]/formly-field[1]/formly-group[1]/formly-field[10]/formly-card-wrapper[1]/div[1]/div[2]/formly-repeat-section[1]/div[1]/formly-field[1]/formly-group[1]/formly-field[5]/formly-wrapper-form-field[1]/div[1]/input[1]"))
 				.sendKeys(new CharSequence[]{"TEST PROJECT"});
@@ -349,6 +351,7 @@ public class EMEANewClient {
 		chromeDriver.findElement(By.xpath(
 				"/html[1]/body[1]/app-root[1]/app-dashboard-container[1]/div[1]/div[2]/div[1]/app-clients-container[1]/app-data-container[1]/form[1]/div[1]/div[1]/div[1]/div[1]/ngb-typeahead-window[1]/button[1]/ngb-highlight[1]"))
 				.click();
+		// Delete the test customer
 		chromeDriver
 				.findElement(By.xpath("//tbody/tr[1]/td[6]/fa-icon[1]/*[1]"))
 				.click();
