@@ -285,6 +285,7 @@ public class EMEANewClient {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		// Add Contract Length
 		chromeDriver.findElement(By.xpath(
 				"/html[1]/body[1]/ngb-modal-window[2]/div[1]/div[1]/app-role-detail[1]/div[2]/form[1]/formly-form[1]/formly-field[1]/formly-group[1]/formly-field[10]/formly-card-wrapper[1]/div[1]/div[2]/formly-repeat-section[1]/div[1]/formly-field[1]/formly-group[1]/formly-field[4]/formly-wrapper-form-field[1]/div[1]/input[1]"))
 				.sendKeys(new CharSequence[]{"12"});
