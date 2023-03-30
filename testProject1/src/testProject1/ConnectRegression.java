@@ -47,7 +47,25 @@ public class ConnectRegression {
 			System.out.println(
 					"The Brookson Connect - Online Portal Page FAILED TO LOAD");
 		// System.out.println(driver.getTitle());
+
 		driver.findElement(By.id("userName")).sendKeys("270021");
+		driver.findElement(By.name("submit")).click();
+
+		// expected error text
+		String exp = "Form invalid!";
+		// identify actual error message
+		WebElement m = driver.findElement(By.xpath(
+				"/html/body/div[1]/div[1]/ui-view/brookson-login-login/div/div/div/form/div[2]/div[3]"));
+		String act = m.getText();
+		System.out.println("Expected Error message is: " + exp);
+		System.out.println("Actual Error message is: " + act);
+
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		driver.findElement(By.id("Password1")).sendKeys("Bluebell999*");
 		driver.findElement(By.name("submit")).click();
 
@@ -231,7 +249,8 @@ public class ConnectRegression {
 			e.printStackTrace();
 		}
 
-		driver.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/a/i"))
+		driver.findElement(By.xpath(
+				"/html[1]/body[1]/div[4]/div[1]/div[1]/div[1]/a[1]/i[1]"))
 				.click();
 
 		System.out.println("Period End Date Help pop up closed");
